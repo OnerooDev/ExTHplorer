@@ -1,6 +1,6 @@
 # ExTHplorer
 
-####More usefull api requests for explore smart-contracts on ETH/BSC/MATIC and same EVMs.
+#### More usefull api requests for explore smart-contracts on ETH/BSC/MATIC and same EVMs.
 
 ## Install
   Yarn
@@ -8,11 +8,10 @@
   node exth.js
 
 ----
-
 ## API Scheme
-####Standart URL address - http://localhost:3001/api3/{PATH}
+#### Standart URL address - http://localhost:3001/api3/{PATH}
 ----
-####All available **GET** requests:
+#### All available **GET** requests:
 ----
 Use this **{PATH}** to prepare your request:
 
@@ -20,7 +19,7 @@ User data description:
 **$contr_address** - smart-contract address
 **$user_address** - user address
 
-#####🦄1. {PATH} = UNI/{METH}
+##### 🦄1. {PATH} = UNI/{METH}
 Methods for explore 🦄Uniswap🦄 smart-contracts:
 
 Uniswap V2:
@@ -35,16 +34,13 @@ Get pool tokens addresses from LP contract
 Get pool prices from LP contract
 **{FUNC} = prices/$contr_address**
 
-
 Get ALL ⬆️ **{FUNC}** from LP contract
 **{FUNC} = info/$contr_address**
-
-
 
 Uniswap V3:
 **- {METH} = V3/{FUNC}**
 *Maintenance 🔧*
-#####⛓2. {PATH} = TOKEN/{METH}
+##### ⛓2. {PATH} = TOKEN/{METH}
 Methods for ⛓Token⛓ smart-contract
 
 Get token($contr_address) name and symbol
@@ -62,7 +58,7 @@ Get token($contr_address) balance on wallet($user_address)
 *Maintenance 🔧*
 
 
-#####🌈3. {PATH} = CURVE/{METH}
+##### 🌈3. {PATH} = CURVE/{METH}
 Methods for explore 🌈Curve🌈 smart-contracts
 
 *Maintenance 🔧*
