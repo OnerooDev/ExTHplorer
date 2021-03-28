@@ -19,7 +19,7 @@ User data description:
 **$contr_address** - smart-contract address
 **$user_address** - user address
 
-##### 1. {PATH} = UNI/{METH}
+### 1. {PATH} = UNI/{METH}
 Methods for explore 🦄Uniswap🦄 smart-contracts:
 
 Uniswap V2:
@@ -40,7 +40,7 @@ Get ALL ⬆️ **{FUNC}** from LP contract
 Uniswap V3:
 **- {METH} = V3/{FUNC}**
 *Maintenance 🔧*
-##### 2. {PATH} = TOKEN/{METH}
+### 2. {PATH} = TOKEN/{METH}
 Methods for ⛓Token⛓ smart-contract
 
 Get token($contr_address) name and symbol
@@ -56,7 +56,7 @@ Get token($contr_address) balance on wallet($user_address)
 **- {METH} = balanceof/$contr_address/$user_address**
 
 
-##### 3. {PATH} = CURVE/{METH}
+### 3. {PATH} = CURVE/{METH}
 Methods for explore 🌈Curve🌈 smart-contracts
 
 *Maintenance 🔧*
