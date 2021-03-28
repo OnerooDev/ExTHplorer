@@ -55,8 +55,6 @@ Get token($contr_address) decimals
 Get token($contr_address) balance on wallet($user_address)
 **- {METH} = balanceof/$contr_address/$user_address**
 
-*Maintenance 🔧*
-
 
 ##### 3. {PATH} = CURVE/{METH}
 Methods for explore 🌈Curve🌈 smart-contracts
