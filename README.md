@@ -1,6 +1,18 @@
 # ExTHplorer
 
 #### More usefull api requests for explore smart-contracts on ETH/BSC/MATIC and same EVMs.
+------
+## Ready to use:
+
+### Main chains:
+#### ETH - https://explore-eth.onerood.dev/
+#### BSC - https://explore-bsc.onerood.dev/
+#### MATIC - https://explore-matic.onerood.dev/
+
+### Test chains: - *Maintenance 🔧*
+#### KOVAN - https://explore-kovan.onerood.dev/
+#### BSC Testnet - https://explore-bsc-test.onerood.dev/
+#### MATIC Testnet - https://explore-matic-test.onerood.dev/
 
 ## Install
   Yarn
