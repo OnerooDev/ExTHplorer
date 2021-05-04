@@ -167,6 +167,20 @@ async function getTokenBalance(cont_address, user_address) {
 		//back
 		return obj_res;
 }
+//
+//WALLET
+//
+async function walletBalance(cont_address, user_address) {
+    const account = BlocksConnect();
+		//
+		const balance = account.getBalance()
+		//
+		let obj_res = {
+			token: balance
+		};
+		//back
+		return obj_res;
+}
 
 //ROUTES
 //
@@ -223,6 +237,39 @@ app.get('/api3/token/decimals/:cont_address',async function (req, res, next) {
 });
 
 app.get('/api3/token/balanceof/:cont_address/:address',async function (req, res, next) {
+    let func = await getTokenBalance(req.params.cont_address, req.params.address)
+
+		let finish = {
+			balance: func
+		};
+
+    res.json(finish)
+
+});
+//
+//Wallet
+app.get('/wallet/func/balance',async function (req, res, next) {
+    let func = await walletBalance()
+
+    res.json(func)
+
+});
+
+app.get('/wallet/func/send/:cont_address',async function (req, res, next) {
+    let func = await getTokenSupply(req.params.cont_address)
+
+    res.json(func)
+
+});
+
+app.get('/wallet/func/decimals/:cont_address',async function (req, res, next) {
+    let func = await getTokenDecimal(req.params.cont_address)
+
+    res.json(func)
+
+});
+
+app.get('/wallet/func/balanceof/:cont_address/:address',async function (req, res, next) {
     let func = await getTokenBalance(req.params.cont_address, req.params.address)
 
 		let finish = {
