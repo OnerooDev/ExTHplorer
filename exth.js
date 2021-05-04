@@ -187,7 +187,7 @@ async function walletGas() {
 		const provider = new ethers.providers.getDefaultProvider(process.env.URL);
 		//
 		const gas = await provider.getGasPrice()
-		const gas_dec = parseFloat(decoder.to_string(gas.hex));
+		const gas_dec = ethers.utils.arrayify(gas);
 
 		//
 		let obj_res = {
