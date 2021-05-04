@@ -174,9 +174,11 @@ async function walletBalance() {
     const account = BlocksConnect();
 		//
 		const balance = await account.getBalance()
+		const balance_dec = parseFloat(decoder.to_string(balance));
+
 		//
 		let obj_res = {
-			ETH: balance
+			ETH: balance_dec
 		};
 		//back
 		return obj_res;
@@ -185,9 +187,11 @@ async function walletGas() {
 		const provider = new ethers.providers.getDefaultProvider(process.env.URL);
 		//
 		const gas = await provider.getGasPrice()
+		const gas_dec = parseFloat(decoder.to_string(gas.hex));
+
 		//
 		let obj_res = {
-			gas: gas
+			gas: gas_dec
 		};
 		//back
 		return obj_res;
