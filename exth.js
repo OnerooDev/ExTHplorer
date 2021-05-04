@@ -170,17 +170,29 @@ async function getTokenBalance(cont_address, user_address) {
 //
 //WALLET
 //
-async function walletBalance(cont_address, user_address) {
+async function walletBalance() {
     const account = BlocksConnect();
 		//
-		const balance = account.getBalance()
+		const balance = await account.getBalance()
 		//
 		let obj_res = {
-			token: balance
+			ETH: balance
 		};
 		//back
 		return obj_res;
 }
+async function walletGas() {
+		const provider = new ethers.providers.getDefaultProvider(process.env.URL);
+		//
+		const gas = await provider.getGasPrice()
+		//
+		let obj_res = {
+			gas: gas
+		};
+		//back
+		return obj_res;
+}
+const provider = new ethers.providers.getDefaultProvider(process.env.URL);
 
 //ROUTES
 //
@@ -255,8 +267,8 @@ app.get('/wallet/func/balance',async function (req, res, next) {
 
 });
 
-app.get('/wallet/func/send/:cont_address',async function (req, res, next) {
-    let func = await getTokenSupply(req.params.cont_address)
+app.get('/wallet/func/gas',async function (req, res, next) {
+    let func = await walletGas()
 
     res.json(func)
 
