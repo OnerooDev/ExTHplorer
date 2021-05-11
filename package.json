@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "coingecko-api": "^1.0.10",
     "dotenv": "^8.2.0",
     "ethers": "^5.0.32",
     "express": "^4.17.1"
