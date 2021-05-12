@@ -23,7 +23,7 @@ module.exports = {
 //
 //WALLET
 //
-walletBalance: async function walletBalance() {
+walletBalance: async function() {
     const account = this.BlocksConnect();
 		//
 		const balance = await account.getBalance()
@@ -35,6 +35,25 @@ walletBalance: async function walletBalance() {
 		};
 		//back
 		return obj_res;
+},
+
+walletBalanceByAddress: async function(address) {
+	try{
+		const provider = new ethers.providers.getDefaultProvider(process.env.URL);
+	//
+		const bal = await provider.getBalance(address)
+		const balance_dec = ethers.utils.formatEther(bal);
+
+	//back
+		return balance_dec;
+	}
+	catch(err){
+		let arr = {
+			data: false
+		}
+		return arr;
+
+	}
 },
 
 walletAddress: async function() {
