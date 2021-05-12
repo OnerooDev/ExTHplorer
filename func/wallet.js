@@ -48,9 +48,7 @@ walletBalanceByAddress: async function(address) {
 		return balance_dec;
 	}
 	catch(err){
-		let arr = {
-			data: false
-		}
+		let arr = false
 		return arr;
 
 	}
