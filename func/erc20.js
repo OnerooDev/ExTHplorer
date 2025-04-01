@@ -5,6 +5,8 @@
 
 //Use lib
 const ethers = require('ethers');
+const abi = require('../lib/contract-abi');
+const decoder = require('../lib/decode');
 var networks = require('@ethersproject/networks');
 
 //
@@ -25,10 +27,9 @@ getTokenName: async function(cont_address) {
 		//
 		const Contract = abi.token(cont_address, account);
 		const name = await Contract.name();
-		const name_dec = decoder.to_string(name);
 		//
 		let obj_res = {
-			name: name_dec
+			name: name
 		};
 		//back
 		return obj_res;
